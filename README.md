@@ -24,3 +24,12 @@ examples thus some of the code is Copyright © 2001-2013 Python
 Software Foundation; All Rights Reserved under the PSF license (GPL
 compatible) http://docs.python.org/2/library/socketserver.html
 
+
+
+reference link:
+https://www.programiz.com/python-programming/methods/built-in/bytearray
+https://github.com/xqiu1/CMPUT404-assignment-webserver/blob/master/server.py
+https://github.com/shuming2/CMPUT404-assignment-webserver/blob/master/server.py
+https://github.com/toado/CMPUT404-assignment-webserver/blob/master/server.py
+https://github.com/YongqinJian/CMPUT404-assignment-webserver/blob/master/server.py
+https://github.com/YipuChen/CMPUT404-assignment-webserver/blob/master/server.py
