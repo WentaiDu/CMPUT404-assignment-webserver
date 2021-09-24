@@ -63,11 +63,11 @@ class MyWebServer(socketserver.BaseRequestHandler):
     def file_check(self,response,text,filename):
         
         if '.css' in filename:
-            mine = 'text/css'
+            file_type = 'text/css'
         elif '.html' in filename:
-            mine = 'text/html'
+            file_type = 'text/html'
 
-        response = response + 'content-type: '+ mime + '\r\n\r\n' + text
+        response = response + date + length + connection+'content-type: '+ file_type + '\r\n\r\n' + text
         return response
 
 
