@@ -1,4 +1,5 @@
 import socketserver
+from datetime import datetime
 class MyWebServer(socketserver.BaseRequestHandler):
     
     def handle(self):
@@ -28,14 +29,18 @@ class MyWebServer(socketserver.BaseRequestHandler):
                 if '.html' in filename or '.css' in filename:
                     try:
                         text=self.file_open(filename)
+                        time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                        date="Date: " + time +"\r\n"
+                        length = "Content-Length: " + str(len(text))+"\r\n"
+                        connection = "Connection: close\r\n"
 
                         if '.html' in filename:
                             file_type = 'text/html'
                         elif '.css' in filename:
                             file_type = 'text/css'
 
-                        response = response + 'content-type: '+ file_type + '\r\n\r\n' + text
-
+                        #response = response + 'content-type: '+ file_type + '\r\n\r\n' + text
+                        response = response + date + length + connection+'content-type: '+ file_type + '\r\n\r\n' + text
                     except:
                         response = 'HTTP/1.1 404 Not Found\r\n\r\n 404 Not Found'
 
