@@ -10,7 +10,7 @@ class MyWebServer(socketserver.BaseRequestHandler):
         if not self.method_check(request_method):
             self.handle_405()
         else:
-            response = 'HTTP/1.0 200 OK\r\n'
+            response = 'HTTP/1.1 200 OK\r\n'
             if filename[-1] != '/' and '.' not in filename:
                 filename = 'http://127.0.0.1:8080'+filename+'/'
                 self.handle_301(filename)
