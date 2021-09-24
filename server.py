@@ -68,7 +68,7 @@ class MyWebServer(socketserver.BaseRequestHandler):
 
 
     #def handle_200(self):
-    #    response = 'HTTP/1.0 200 OK\r\n'
+    #    response = 'HTTP/1.1 200 OK\r\n'
 	#return response
 
     def handle_404(self):
